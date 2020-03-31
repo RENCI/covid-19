@@ -1,0 +1,53 @@
+{
+  "name": "gatsby-starter-default",
+  "private": true,
+  "description": "RENCI's COVID-19 Response",
+  "version": "0.1.0",
+  "author": "Matt Watson <mwatson@renci.org>",
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.10.7",
+    "gatsby": "^2.20.10",
+    "gatsby-image": "^2.2.30",
+    "gatsby-plugin-manifest": "^2.3.3",
+    "gatsby-plugin-offline": "^3.0.17",
+    "gatsby-plugin-react-helmet": "^3.1.13",
+    "gatsby-plugin-sharp": "^2.5.3",
+    "gatsby-plugin-styled-components": "^3.2.1",
+    "gatsby-source-filesystem": "^2.1.35",
+    "gatsby-transformer-sharp": "^2.4.3",
+    "gatsby-transformer-yaml": "^2.3.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-grid-system": "^6.3.0",
+    "react-helmet": "^5.2.1",
+    "react-spring": "^8.0.27",
+    "styled-components": "^5.0.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0",
+    "prettier": "^1.18.2"
+  },
+  "keywords": [
+    "renci",
+    "covid-19",
+    "coronavirus"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/renci/covid-19"
+  },
+  "bugs": {
+    "url": "https://github.com/renci/covid-19/issues"
+  }
+}

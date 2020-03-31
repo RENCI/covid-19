@@ -1,0 +1,23 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/**
+keep these color definitions around?
+**/
+
+:root {
+    --color-white: #eee;
+    --color-black: #222;
+    --color-primary: coral; /* #ff7f50 */
+    --color-primary-light: lightcoral;  /* #f08080 */
+    --color-primary-dark: #c05050;
+    --color-secondary: cyan; /* #0ff */
+    --color-secondary-light: lightcyan; /* #e0ffff */
+    --color-secondary-dark: darkcyan; /* #008b8b */
+}
+
+html {
+    font-family: sans-serif;
+    color: #444;
+}
