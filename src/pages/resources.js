@@ -21,7 +21,7 @@ const ResourcesPage = () => {
             <section id="resource-list">
                 {
                     resources.map(({ name, url, description }) => (
-                        <Card>
+                        <Card key={ name }>
                             <CardHeader>{ name }</CardHeader>
                             <CardBody>
                                 { description }
