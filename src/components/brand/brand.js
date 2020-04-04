@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-export const Brand = styled(Link)(({ theme }) => `
+export const Brand = styled(Link).attrs({ to: '/' })(({ theme }) => `
     display: flex;
     flex-direction: row;
     justify-content: center;

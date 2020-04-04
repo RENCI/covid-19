@@ -46,14 +46,12 @@ export const DefaultLayout = ({ children }) => {
                                 </Paragraph>
                             </Col>
                             <Col xs={ 12 } md={ 6 }>
-                                <Paragraph right>
-                                    <ul style={{ listStyleType: 'none' }}>
-                                        <li><a href="#">Lorem ipsum</a></li>
-                                        <li><a href="#">Quos magni</a></li>
-                                        <li><a href="#">Possimus</a></li>
-                                        <li><a href="#">Maiores</a></li>
-                                    </ul>
-                                </Paragraph>
+                                <ul style={{ listStyleType: 'none', textAlign: 'right' }}>
+                                    <li><a href="#">Lorem ipsum</a></li>
+                                    <li><a href="#">Quos magni</a></li>
+                                    <li><a href="#">Possimus</a></li>
+                                    <li><a href="#">Maiores</a></li>
+                                </ul>
                             </Col>
                         </Row>
                     </Grid>

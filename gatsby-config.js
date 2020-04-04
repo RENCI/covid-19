@@ -5,9 +5,9 @@ module.exports = {
     author: `mbwatson`,
     menuItems:[
       { text: 'Home', path: '/', },
-      { text: 'work', path: '/work', },
-      { text: 'Resources', path: '/resources', },
-      { text: 'Contact', path: '/contact', },
+      { text: 'work', path: '/work/', },
+      { text: 'Resources', path: '/resources/', },
+      { text: 'Contact', path: '/contact/', },
     ],
   },
   plugins: [
