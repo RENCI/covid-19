@@ -3,6 +3,7 @@ import { PageContent } from '../components/layout'
 import { Title, Paragraph } from '../components/typography'
 import { SEO } from '../components/seo'
 import { Card, CardHeader, CardBody } from '../components/card'
+import { Button } from '../components/button'
 
 const IndexPage = () => (
     <PageContent>
@@ -19,6 +20,9 @@ const IndexPage = () => (
             <CardBody>
                 <Paragraph>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni libero quisquam eos consectetur excepturi possimus qui, aliquam minus ratione molestias vero deserunt magnam sed obcaecati ullam nobis, aperiam sapiente molestiae laboriosam maxime id laborum doloribus corporis. Excepturi aliquid, nisi minus quidem, commodi inventore maxime? Temporibus.
+                </Paragraph>
+                <Paragraph center>
+                    <Button>View More</Button>
                 </Paragraph>
             </CardBody>
         </Card>
