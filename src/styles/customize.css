@@ -1,23 +1,12 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
-/**
-keep these color definitions around?
-**/
-
-:root {
-    --color-white: #eee;
-    --color-black: #222;
-    --color-primary: coral; /* #ff7f50 */
-    --color-primary-light: lightcoral;  /* #f08080 */
-    --color-primary-dark: #c05050;
-    --color-secondary: cyan; /* #0ff */
-    --color-secondary-light: lightcyan; /* #e0ffff */
-    --color-secondary-dark: darkcyan; /* #008b8b */
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300,400,700&display=swap');
 
 html {
-    font-family: sans-serif;
-    color: #444;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11pt;
+    letter-spacing: 0.1rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    line-height: 1.5;
 }
