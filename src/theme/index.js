@@ -15,7 +15,7 @@ export const theme = {
         grey: '#999',
     },
     border: {
-        radius: '5px',
+        radius: '3px',
         width: '1px',
     },
     padding: {

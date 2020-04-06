@@ -44,7 +44,7 @@ const Marker = styled.div(({ theme, x, y, width }) => `
     left: 0;
     top: ${ y }px;
     width: 100%;
-    height: 8px;
+    height: 6px;
     border-radius: ${ theme.border.radius };
     background-color: ${ theme.color.primary.main };
     transition: opacity 250ms;
