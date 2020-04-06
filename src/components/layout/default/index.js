@@ -57,10 +57,10 @@ export const DefaultLayout = ({ children }) => {
                             </Col>
                             <Col xs={ 12 } md={ 6 }>
                                 <ul style={{ listStyleType: 'none', textAlign: 'right' }}>
-                                    <li><a href="#">Lorem ipsum</a></li>
-                                    <li><a href="#">Quos magni</a></li>
-                                    <li><a href="#">Possimus</a></li>
-                                    <li><a href="#">Maiores</a></li>
+                                    <li><a href="/">Lorem ipsum</a></li>
+                                    <li><a href="/">Quos magni</a></li>
+                                    <li><a href="/">Possimus</a></li>
+                                    <li><a href="/">Maiores</a></li>
                                 </ul>
                             </Col>
                         </Row>

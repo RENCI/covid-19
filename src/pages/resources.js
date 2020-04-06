@@ -2,7 +2,7 @@ import React from 'react'
 import { PageContent } from '../components/layout'
 import { SEO } from '../components/seo'
 import { useResources } from '../hooks'
-import { Title, Heading, Paragraph } from '../components/typography'
+import { Title } from '../components/typography'
 import { Card, CardHeader, CardBody, CardFooter } from '../components/card'
 import { ExternalLink } from '../components/link'
 

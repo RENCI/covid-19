@@ -56,7 +56,7 @@ const Marker = styled.div(({ theme, x, y, width }) => `
 
 export const Menu = ({ items }) => {
     const { windowWidth } = useWindowWidth()
-    const [activeIndex, setActiveIndex] = useState()
+    const runningInBrowser = typeof window !== 'undefined' && window.location.pathname
     const [markerProperties, setMarkerProperties] = useState({ })
     const activeMenuItem = useRef()
     
@@ -68,9 +68,11 @@ export const Menu = ({ items }) => {
     }
 
     useEffect(() => {
-        activeMenuItem.current = document.querySelector('.active')
-        getMarkerCoordinates()
-    }, [typeof window !== 'undefined' && window.location.pathname, windowWidth])
+        if (runningInBrowser) {
+            activeMenuItem.current = document.querySelector('.active')
+            getMarkerCoordinates()
+        }
+    }, [runningInBrowser, windowWidth])
 
     return (
         <Location>

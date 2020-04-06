@@ -1,5 +1,5 @@
 import React from 'react'
-import { Title, Heading, Paragraph } from '../components/typography'
+import { Title, Paragraph } from '../components/typography'
 import { PageContent } from '../components/layout'
 import { SEO } from '../components/seo'
 import { Card, CardHeader, CardBody } from '../components/card'

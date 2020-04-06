@@ -1,7 +1,7 @@
 import React from 'react'
 import { PageContent } from '../components/layout'
 import { SEO } from '../components/seo'
-import { Title, Heading, Paragraph } from '../components/typography'
+import { Title, Paragraph } from '../components/typography'
 import { Card, CardHeader, CardBody } from '../components/card'
 
 const ContactPage = () => (
