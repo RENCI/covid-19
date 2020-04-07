@@ -5,7 +5,7 @@ module.exports = {
     author: `mbwatson`,
     menuItems:[
       { text: 'Home', path: '/', },
-      { text: 'work', path: '/work/', },
+      { text: 'Our Work', path: '/work/', },
       { text: 'Resources', path: '/resources/', },
       { text: 'Contact', path: '/contact/', },
     ],
