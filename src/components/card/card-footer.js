@@ -11,7 +11,7 @@ export const CardFooter = styled.div(({
     ${ right && 'justify-content: flex-end' };
     align-items: center;
     color: ${ theme.color.black };
-    background-color: ${ theme.color.white };
+    background-color: inherit;
     padding: ${ theme.padding.normal };
     height: 4rem;
 `)

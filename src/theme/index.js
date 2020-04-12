@@ -1,17 +1,20 @@
 export const theme = {
     color: {
+        carolinaBlue: '#4b9cd3',
+        renciBlue: '#00758d',
         primary: {
-            light: '#7ba5b3',
-            main: '#3b75a3',
-            dark: '#0b5593',
+            light: '#00a5cd',
+            main: '#00758d',
+            dark: '#00455d',
         },
-        secondary: {
-            light: '#9de5f0',
-            main: '#49a0d9',
-            dark: '#2990a9',
+        extended: {
+            moss: '#5e9b8b',
+            contessa: '#c16a5d',
+            sherbet: '#ffa872',
         },
         white: '#eff',
         black: '#222',
+        darkgrey: '#334',
         grey: '#999',
     },
     border: {

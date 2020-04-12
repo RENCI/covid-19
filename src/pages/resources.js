@@ -16,7 +16,7 @@ const ResourcesPage = () => {
                 description=""
                 keywords=""
             />
-            <Title>Resources</Title>
+            <Title>General COVID-19 Resources</Title>
 
             <section id="resource-list">
                 {

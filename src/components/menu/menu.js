@@ -20,21 +20,29 @@ const MenuItem = styled(Link)(({ theme }) => `
     outline: 0;
     display: flex;
     flex-direction: row;
-    font-size: 120%;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 100%;
     text-decoration: none;
     text-transform: uppercase;
-    color: ${ theme.color.black };
-    padding: 1rem 2rem;
-    transition: color 250ms, border-bottom-color 250ms, opacity 250ms;
-    background-color: transparent;
-    &.active {
-        color: ${ theme.color.primary.dark };
+    color: ${ theme.color.primary.main };
+    padding: 1rem 0;
+    font-size: 100%;
+    @media (min-width: 900px) {
+        padding: 1rem;
+        font-size: 120%;
     }
+    margin: 0 1rem;
+    transition: color 250ms, border-bottom-color 250ms, filter 250ms;
+    background-color: transparent;
     &:hover, &:focus {
-        opacity: 0.5;
+        filter: brightness(0.5);
+        color: ${ theme.color.primary.main };
+    }
+    &.active, &.active:hover, &.active:focus {
+        filter: brightness(1.0);
+        color: ${ theme.color.primary.dark };
     }
 `)
 
@@ -46,7 +54,7 @@ const Marker = styled.div(({ theme, x, y, width }) => `
     width: 100%;
     height: 6px;
     border-radius: ${ theme.border.radius };
-    background-color: ${ theme.color.primary.main };
+    background-color: ${ theme.color.primary.dark };
     transition: opacity 250ms;
     transition: transform 150ms ease-out, max-width 250ms, opacity 1000ms;
     transform: translateX(${ x }px);

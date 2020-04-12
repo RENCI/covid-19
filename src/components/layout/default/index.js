@@ -13,6 +13,7 @@ import { Container as Grid, Row, Col } from 'react-grid-system'
 import { Paragraph } from '../../typography'
 import { ExternalLink } from '../../link'
 import { FacebookIcon, LinkedInIcon, TwitterIcon } from '../../icons'
+import coronavirusImage from '../../../images/coronavirus.svg'
 import '../../../styles/normalize.css'
 import '../../../styles/customize.css'
 
@@ -29,8 +30,12 @@ const LayoutWrapper = styled.div(({ theme }) => `
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(120deg, #e4efe9ee, #93a5cfee 70vmax),
-                linear-gradient(150deg, #00ff00cc, #00ff0000 70vmax);
+    background: linear-gradient(150deg, #ffffff00, ${ theme.color.renciBlue }99 100vmax),
+                linear-gradient(170deg, ${ theme.color.carolinaBlue }33, #ffffff00 100vmax),
+                url(${ coronavirusImage });
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 `)
 
 export const DefaultLayout = ({ children }) => {
@@ -40,46 +45,44 @@ export const DefaultLayout = ({ children }) => {
     return (
         <LayoutWrapper>
             <Header compact={ isCompact }>
-                <Brand>Site Title</Brand>
+                <Brand width="180px" />
                 { isCompact ? <MobileMenu items={ menuItems} /> : <Menu items={ menuItems} /> }
             </Header>
             <Main>
                 { children }
             </Main>
             <Footer>
-                <Container style={{ padding: '2rem 0' }}>
+                <Container>
                     <Grid fluid>
                         <Row>
-                            <Col xs={ 12 } md={ 6 }>
-                                <Paragraph>
+                            <Col xs={ 12 }>
+                                <Paragraph center>
+                                    <ExternalLink to="https://www.renci.org/">RENCI</ExternalLink> (Renaissance Computing Institute) develops and deploys advanced technologies to enable research discoveries and practical innovations.
+                                    RENCI partners with researchers, government, and industry to engage and solve the problems that affect North Carolina, our nation, and the world.
+                                </Paragraph>
+                            </Col>
+                        </Row>
+                        <Row>
+                            <Col xs={ 12 } sm={ 6 }>
+                                <Paragraph center={ isCompact } left={ !isCompact }>
                                     &copy; RENCI { new Date().getFullYear() }
                                 </Paragraph>
                             </Col>
-                            <Col xs={ 12 } md={ 6 }>
-                                <ul style={{ listStyleType: 'none', textAlign: 'right' }}>
-                                    <li><a href="/">Lorem ipsum</a></li>
-                                    <li><a href="/">Quos magni</a></li>
-                                    <li><a href="/">Possimus</a></li>
-                                    <li><a href="/">Maiores</a></li>
-                                </ul>
+                            <Col xs={ 12 } sm={ 6 }>
+                                <Paragraph center={ isCompact } right={ !isCompact }>
+                                    <SocialLink to="https://twitter.com/RENCI">
+                                        <TwitterIcon size={ 32 } fill={ theme.color.primary.main } />
+                                    </SocialLink>
+                                    <SocialLink to="https://www.facebook.com/renci.org/">
+                                        <FacebookIcon size={ 32 } fill={ theme.color.primary.main } />
+                                    </SocialLink>
+                                    <SocialLink to="https://www.linkedin.com/company/renaissance-computing-institute/">
+                                        <LinkedInIcon size={ 32 } fill={ theme.color.primary.main } />
+                                    </SocialLink>
+                                </Paragraph>
                             </Col>
                         </Row>
                     </Grid>
-                    <Row>
-                        <Col xs={ 12 }>
-                            <Paragraph center>
-                                <SocialLink to="https://tiwtter.com/renci">
-                                    <TwitterIcon size={ 32 } fill={ theme.color.primary.light } />
-                                </SocialLink>
-                                <SocialLink to="https://facebook.com/renci">
-                                    <FacebookIcon size={ 32 } fill={ theme.color.primary.light } />
-                                </SocialLink>
-                                <SocialLink to="https://linkedin.com/renci">
-                                    <LinkedInIcon size={ 32 } fill={ theme.color.primary.light } />
-                                </SocialLink>
-                            </Paragraph>
-                        </Col>
-                    </Row>
                 </Container>
             </Footer>
         </LayoutWrapper>

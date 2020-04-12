@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 // 
 
 export const Heading = styled.h2`
+    font-size: 133%;
     text-align: left;
     ${ props => props.center && 'text-align: center;' }
     ${ props => props.right && 'text-align: right;' }

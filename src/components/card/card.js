@@ -15,6 +15,17 @@ export const Card = styled.div(({ theme }) => `
     &:hover {
         filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.2));
     }
+    a, a:active, a:visited {
+        color: ${ theme.color.primary.light };
+        transition: filter 250ms, text-decoration-color 250ms;
+        text-decoration-color: ${ theme.color.primary.light };
+        text-underline-offset: 0.1em;
+    }
+    a:hover, a:active:hover, a:visited:hover {
+        filter: brightness(0.75);
+        text-decoration-color: ${ theme.color.primary.dark };
+        text-underline-offset: 0.1em;
+    }
 `)
 
 Card.propTypes = {

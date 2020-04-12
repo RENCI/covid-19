@@ -6,12 +6,12 @@ export const CardHeader = styled.div(({ theme }) => `
     // justify-content: center;
     // align-items: center;
     // text-align: left;
-    color: ${ theme.color.black };
-    background-color: ${ theme.color.white };
+    color: ${ theme.color.darkgrey };
+    background-color: inherit;
     font-weight: bold;
     padding: 0.5rem 2rem;
     position: relative;
-    font-size: 133%;
+    font-size: 200%;
     min-height: 4rem;
     padding: ${ theme.padding.normal } ${ theme.padding.normal } 0 ${ theme.padding.normal };
 `)

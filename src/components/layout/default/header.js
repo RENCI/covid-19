@@ -8,5 +8,6 @@ export const Header = styled.header(({ theme }) => `
     justify-content: space-around;
     align-items: stretch;
     height: 6rem;
-    padding: 0 2rem;
+    margin: 1rem 0;
+    padding: 0 1rem;
 `)

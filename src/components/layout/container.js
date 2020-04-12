@@ -4,8 +4,6 @@ import { AnimateOnMount } from '../anim'
 
 const DEFAULT_WIDTH = "calc(100vw - 4rem)"
 const DEFAULT_MAXWIDTH = "1080px"
-const TOP_MARGIN = '4rem'
-const BOTTOM_MARGIN = '2rem'
 
 export const Container = styled.div`
     // & * { border: 1px solid #f99; }

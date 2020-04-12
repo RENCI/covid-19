@@ -1,3 +1,5 @@
+export * from './use-blog'
+export * from './use-brand'
 export * from './use-local-storage'
 export * from './use-menu'
 export * from './use-resources'

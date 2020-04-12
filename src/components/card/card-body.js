@@ -10,7 +10,7 @@ const CardBodyWrapper = styled.div`
 const CardBodyContents = styled.div(({ theme }) => `
     flex: 1;
     padding: ${ theme.padding.normal };
-    background-color: ${ theme.color.white };
+    background-color: inherit;
     color: ${ theme.color.black };
 `)
 

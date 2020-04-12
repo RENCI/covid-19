@@ -1,16 +1,19 @@
+import React from 'react'
+import Img from 'gatsby-image'
+import { useBrand } from '../../hooks'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 
-export const Brand = styled(Link).attrs({ to: '/' })(({ theme }) => `
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 120%;
-    text-decoration: none;
-    color: ${ theme.color.black };
+export const BrandContainer = styled(Link).attrs({ to: '/' })(({ theme }) => `
+    padding: 0 0 0 1rem;
+    height: 100%;
 `)
+
+export const Brand = ({ path = '/', height = 'auto', width = 'auto', style }) => {
+    const renciLogo = useBrand()
+    return (
+        <BrandContainer to={ path } >
+            <Img fixed={ renciLogo.fixed } style={{ width: width, height: '100%' }} alt="RENCI logo" />
+        </BrandContainer>
+    )
+}
