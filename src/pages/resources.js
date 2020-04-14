@@ -26,7 +26,6 @@ const ResourceButton = styled(Button)(({ theme, active = false}) => `
     padding: 0.5rem 1rem;
     margin: 0.5rem;
     border-radius: 4px;
-    transition: background-color 250ms;
     ${ active ? `background-color: ${ theme.color.primary.main };` : `background-color: ${ theme.color.darkgrey };` }
     @media (max-width: 798px) {
         width: 100%;
