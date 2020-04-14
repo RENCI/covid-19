@@ -17,6 +17,10 @@ export const theme = {
         darkgrey: '#334',
         grey: '#999',
         lightgrey: '#cdd',
+        success: '#5e9b8b',
+        info: '#49a0d9',
+        warning: '#ffa872',
+        danger: '#c16a5d',
     },
     border: {
         radius: '3px',

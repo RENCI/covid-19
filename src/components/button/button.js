@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
-export const Button = styled.button(({ theme, dense = false }) => `
-    background-color: ${ theme.color.primary.main };
+export const Button = styled.button(({ theme, dense = false, type = '' }) => `
+    background-color: ${ type ? theme.color[type] : theme.color.primary.main };
     color: ${ theme.color.white };
     border: 0;
     padding: ${ dense ? '0.5rem 1rem' : '1rem 2rem' };
