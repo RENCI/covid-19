@@ -50,7 +50,7 @@ const IndexPage = () => {
                     </Paragraph>
                     {
                         articles.map(({ date, title, url }) => (
-                            <article>
+                            <article key={ title }>
                                 <Heading>
                                     <strong>{ date }</strong><br/>
                                     <ExternalLink to={ url }>{ title }</ExternalLink>

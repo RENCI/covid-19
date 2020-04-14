@@ -86,7 +86,7 @@ const ResourcesPage = () => {
                 <ResourceButton onClick={ handleChangeActiveResources(-1) } active={ activeResourceType === -1 }>ALL ({ resources.reduce((sum, resource) => sum + resource.resources.length, 0) })</ResourceButton>
                 {
                     resources.map((category, i) => (
-                        <ResourceButton onClick={ handleChangeActiveResources(i) } active={ activeResourceType === i }>{ category.title } ({ category.resources.length })</ResourceButton>
+                        <ResourceButton key={ `${ category.title }_button` } onClick={ handleChangeActiveResources(i) } active={ activeResourceType === i }>{ category.title } ({ category.resources.length })</ResourceButton>
                     ))
                 }
             </ResourceButtons>
