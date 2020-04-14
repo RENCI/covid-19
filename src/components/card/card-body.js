@@ -2,11 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-const CardBodyWrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-`
-
 const CardBodyContents = styled.div(({ theme }) => `
     flex: 1;
     padding: ${ theme.padding.normal };
@@ -26,10 +21,8 @@ CardBodyContents.defaultProps = {
 
 export const CardBody = ({ children, image, style }) => {
     return (
-        <CardBodyWrapper>
-            <CardBodyContents style={ style }>
-                { children }
-            </CardBodyContents>
-        </CardBodyWrapper>
+        <CardBodyContents style={ style }>
+            { children }
+        </CardBodyContents>
     )
 }

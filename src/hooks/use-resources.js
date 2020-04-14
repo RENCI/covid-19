@@ -1,12 +1,15 @@
 import { graphql, useStaticQuery } from 'gatsby'
 
 const resourcesQuery = graphql`{
-    resources: allResourcesYaml {
+    resources: allResourcesYaml(sort: {fields: title, order: ASC}) {
         edges {
             node {
-                name
-                url
-                description
+                title
+                resources {
+                    title
+                    source
+                    url
+                }
             }
         }
     }

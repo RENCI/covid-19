@@ -16,6 +16,7 @@ export const theme = {
         black: '#222',
         darkgrey: '#334',
         grey: '#999',
+        lightgrey: '#cdd',
     },
     border: {
         radius: '3px',

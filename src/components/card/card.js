@@ -22,7 +22,7 @@ export const Card = styled.div(({ theme }) => `
         text-underline-offset: 0.1em;
     }
     a:hover, a:active:hover, a:visited:hover {
-        filter: brightness(0.75);
+        filter: brightness(1.25);
         text-decoration-color: ${ theme.color.primary.dark };
         text-underline-offset: 0.1em;
     }
