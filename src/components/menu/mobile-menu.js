@@ -33,7 +33,7 @@ const Toggler = styled.button`
     cursor: pointer;
     background-color: transparent;
     border: 0;
-    z-index: 3;
+    z-index: 4;
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -82,13 +82,13 @@ const MenuItem = styled(Link)(({ theme }) => `
     transition: color 250ms;
     text-transform: uppercase;
     &:hover::after {
-        background-color: ${ theme.color.primary.light }66;
+        background-color: ${ theme.color.primary.main }66;
         transform: scaleX(1.0);
     }
     &.active, &.active:hover {
         color: ${ theme.color.black };
         &::after {
-            background-color: ${ theme.color.primary.light };
+            background-color: ${ theme.color.primary.main };
             transform: scaleX(1.0);
         }
     }
