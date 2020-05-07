@@ -1,5 +1,5 @@
 import React from 'react'
-import { Title } from '../components/typography'
+import { Title, Paragraph } from '../components/typography'
 import { PageContent } from '../components/layout'
 import { SEO } from '../components/seo'
 import { Card, CardHeader, CardBody } from '../components/card'
@@ -18,7 +18,14 @@ const WorkPage = () => {
                 description=""
                 keywords=""
             />
+
             <Title>Our Work</Title>
+
+            <section>
+                <Paragraph>
+                    We will update this page with the latest projects coming out of RENCI as our researchers and their partners work together to develop novel approaches for dealing with COVID-19.
+                </Paragraph>
+            </section>
             
             {
                 work.map(item => (
