@@ -13,6 +13,7 @@ export const CardHeader = styled.div(({ theme }) => `
     font-size: 200%;
     min-height: 4rem;
     padding: ${ theme.padding.normal };
+    padding-bottom: 0;
 `)
 
 CardHeader.propTypes = {
