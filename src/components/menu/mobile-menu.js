@@ -106,8 +106,8 @@ const MenuItem = styled(Link)(({ theme }) => `
         transition: transform 250ms ease-out, background-color 250ms ease-out;
         transform: scaleX(0.0);
         transform-origin: left center;
-        border-top-right-radius: 2rem;
-        border-bottom-right-radius: 2rem;
+        border-top-right-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
     }
 `)
 
