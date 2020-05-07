@@ -7,13 +7,12 @@ export const CardHeader = styled.div(({ theme }) => `
     // align-items: center;
     // text-align: left;
     color: ${ theme.color.darkgrey };
-    background-color: inherit;
+    background: linear-gradient(#f3ffff 0%, ${ theme.color.white } 100%);
     font-weight: bold;
-    padding: 0.5rem 2rem;
     position: relative;
     font-size: 200%;
     min-height: 4rem;
-    padding: ${ theme.padding.normal } ${ theme.padding.normal } 0 ${ theme.padding.normal };
+    padding: ${ theme.padding.normal };
 `)
 
 CardHeader.propTypes = {
