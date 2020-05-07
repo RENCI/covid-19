@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import styled from 'styled-components'
+import React from 'react'
 import { PageContent } from '../components/layout'
 import { SEO } from '../components/seo'
 import { Title, Paragraph } from '../components/typography'
@@ -8,12 +7,6 @@ import { BulletedList, ListItem } from '../components/list'
 import { ContactForm } from '../components/forms'
 
 const ContactPage = () => {
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState('')
-    const [emailAddress, setEmailAddress] = useState('')
-    const [organization, setOrganization] = useState('')
-    const [message, setMessage] = useState('')
-
     return (
         <PageContent>
             <SEO 

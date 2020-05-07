@@ -1,13 +1,11 @@
 import React, { useState } from 'react'
-import { Link } from 'gatsby'
-import { AnchorLink } from 'gatsby-plugin-anchor-links'
 import styled from 'styled-components'
 import { PageContent } from '../components/layout'
 import { SEO } from '../components/seo'
 import { useResources } from '../hooks'
 import { Title, Heading } from '../components/typography'
-import { Card, CardHeader, CardBody, CardFooter } from '../components/card'
-import { ExternalLink, ExternalLinkButton } from '../components/link'
+import { Card, CardHeader, CardBody } from '../components/card'
+import { ExternalLinkButton } from '../components/link'
 import { Button } from '../components/button'
 
 const kebabCase = string => string.toLowerCase().replace(' ', '-')
@@ -64,15 +62,6 @@ const ResourceSource = styled.div(({ theme }) => `
         margin-bottom: ${ theme.padding.normal };
     }
 `)
-
-const ResourceUrl = styled.div``
-
-const ResourceFooter = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-`
 
 const ResourcesPage = () => {
     const resources = useResources()
