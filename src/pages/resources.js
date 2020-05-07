@@ -41,6 +41,9 @@ const Resource = styled.div(({ theme }) => `
     &:not(:last-child) {
         border-bottom: 1px solid ${ theme.color.lightgrey };
     }
+    @media (max-width: 798px) {
+        flex-direction: column;
+    }
 `)
 
 const ResourceInfo = styled.div(({ theme }) => `
@@ -49,11 +52,17 @@ const ResourceInfo = styled.div(({ theme }) => `
 `)
 
 const ResourceTitle = styled(Heading)`
-    // margin: 0;
+    text-align: left;
+    @media (max-width: 798px) {
+        text-align: center;
+    }
 `
 
 const ResourceSource = styled.div(({ theme }) => `
     color: ${ theme.color.grey };
+    @media (max-width: 798px) {
+        margin-bottom: ${ theme.padding.normal };
+    }
 `)
 
 const ResourceUrl = styled.div``
