@@ -94,11 +94,25 @@ const ResourcesPage = () => {
                 </Paragraph>
             </TitleCard>
             
-            <ResourceButtons>
-                <ResourceButton onClick={ handleChangeActiveResources(-1) } active={ activeResourceType === -1 }>ALL ({ resources.reduce((sum, resource) => sum + resource.resources.length, 0) })</ResourceButton>
+            <ResourceButtons role="tablist">
+                <ResourceButton
+                    onClick={ handleChangeActiveResources(-1) }
+                    active={ activeResourceType === -1 }
+                >
+                    ALL ({ resources.reduce((sum, resource) => sum + resource.resources.length, 0) })
+                </ResourceButton>
                 {
                     resources.map((category, i) => (
-                        <ResourceButton key={ `${ category.title }_button` } onClick={ handleChangeActiveResources(i) } active={ activeResourceType === i }>{ category.title } ({ category.resources.length })</ResourceButton>
+                        <ResourceButton
+                            key={ `${ category.title }_button` }
+                            role="tab"
+                            aria-controls={ `resources-${ i }` }
+                            aria-selected={ activeResourceType === i }
+                            onClick={ handleChangeActiveResources(i) }
+                            active={ activeResourceType === i }
+                        >
+                            { category.title } ({ category.resources.length })
+                        </ResourceButton>
                     ))
                 }
             </ResourceButtons>
@@ -110,7 +124,7 @@ const ResourcesPage = () => {
             }}>
                 {
                     resources.map(({ title, resources }, i) => [-1, i].includes(activeResourceType) && (
-                        <Card key={ title } name={ kebabCase(title) }>
+                        <Card key={ title } name={ kebabCase(title) } role="tabpanel" aria-labelledby={ `resources-${ i }` }>
                             <CardHeader>{ title }</CardHeader>
                             <CardBody>
                                     {
