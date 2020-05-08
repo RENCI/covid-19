@@ -5,7 +5,11 @@ import styled from 'styled-components'
 import { Link } from 'gatsby'
 
 export const BrandContainer = styled(Link).attrs({ to: '/' })(({ theme }) => `
-    padding: 0 0 0 1rem;
+    padding: 0;
+    padding-left: 1rem;
+    @media (max-width: 786px) {
+        padding-left: 0;
+    }
     height: 100%;
 `)
 
