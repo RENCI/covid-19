@@ -30,5 +30,6 @@ export const theme = {
         small: '1rem',
         normal: '2rem',
         large: '3rem',
+        extraLarge: '4rem',
     },
 }

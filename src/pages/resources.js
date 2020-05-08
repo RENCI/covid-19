@@ -4,7 +4,7 @@ import { PageContent } from '../components/layout'
 import { SEO } from '../components/seo'
 import { useResources } from '../hooks'
 import { Title, Heading, Paragraph } from '../components/typography'
-import { Card, CardHeader, CardBody } from '../components/card'
+import { TitleCard, Card, CardHeader, CardBody } from '../components/card'
 import { ExternalLinkButton } from '../components/link'
 import { Button } from '../components/button'
 import { kebabCase } from '../util'
@@ -82,21 +82,17 @@ const ResourcesPage = () => {
     return (
         <PageContent>
             <SEO 
-                title="Resources"
+                title="COVID-19 Resources"
                 description=""
                 keywords=""
             />
 
-            <Title>General COVID-19 Resources</Title>
-            
-            <Card dark>
-                <CardBody>
-                    <Paragraph center>
-                        The resources listed below have proven to be of interest at RENCI as we discuss the progression of COVID-19 and and its impact on research and our society.
-                        We have collected them here in case they are interesting to others also, although we do not take credit for or endorse the information within these links in any way.
-                    </Paragraph>
-                </CardBody>
-            </Card>
+            <TitleCard title="COVID-19 Resources">
+                <Paragraph>
+                    The resources listed below have proven to be of interest at RENCI as we discuss the progression of COVID-19 and and its impact on research and our society.
+                    We have collected them here in case they are interesting to others also, although we do not take credit for or endorse the information within these links in any way.
+                </Paragraph>
+            </TitleCard>
             
             <ResourceButtons>
                 <ResourceButton onClick={ handleChangeActiveResources(-1) } active={ activeResourceType === -1 }>ALL ({ resources.reduce((sum, resource) => sum + resource.resources.length, 0) })</ResourceButton>
@@ -109,7 +105,7 @@ const ResourcesPage = () => {
 
             <section id="resource-list" style={{
                 opacity: transitioning ? 0 : 1,
-                transform: `translate3d(${ transitioning ? '0, 4rem, 0' : '0, 0, 0' })`,
+                transform: `translate3d(${ transitioning ? '0, 2rem, 0' : '0, 0, 0' })`,
                 transition: 'transform 250ms ease-out, opacity 250ms',
             }}>
                 {
