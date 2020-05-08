@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 import styled from 'styled-components'
 import { PageContent } from '../components/layout'
 import { SEO } from '../components/seo'
@@ -65,8 +65,19 @@ const ResourceSource = styled.div(({ theme }) => `
 const ResourcesPage = () => {
     const resources = useResources()
     const [activeResourceType, setActiveResourceType] = useState(-1)
+    const [transitioning, setTransitioning] = useState(false)
 
-    const handleChangeActiveResources = index => event => setActiveResourceType(index)
+    useLayoutEffect(() => {
+        if (transitioning) {
+            setTimeout(() => setTransitioning(false), 250)
+        }
+        console.log(transitioning)
+    }, [transitioning])
+
+    const handleChangeActiveResources = index => event => {
+        setTransitioning(true)
+        setTimeout(() => setActiveResourceType(index), 250)
+    }
 
     return (
         <PageContent>
@@ -96,23 +107,27 @@ const ResourcesPage = () => {
                 }
             </ResourceButtons>
 
-            <section id="resource-list">
+            <section id="resource-list" style={{
+                opacity: transitioning ? 0 : 1,
+                transform: `translate3d(${ transitioning ? '0, 4rem, 0' : '0, 0, 0' })`,
+                transition: 'transform 250ms ease-out, opacity 250ms',
+            }}>
                 {
                     resources.map(({ title, resources }, i) => [-1, i].includes(activeResourceType) && (
                         <Card key={ title } name={ kebabCase(title) }>
                             <CardHeader>{ title }</CardHeader>
                             <CardBody>
-                                {
-                                    resources.map(resource => (
-                                        <Resource key={ resource.title }>
-                                            <ResourceInfo>
-                                                <ResourceTitle>{ resource.title }</ResourceTitle>
-                                                <ResourceSource>Source: { resource.source || '-' }</ResourceSource>
-                                            </ResourceInfo>
-                                            <ExternalLinkButton to={ resource.url }>View</ExternalLinkButton>
-                                        </Resource>
-                                    ))
-                                }
+                                    {
+                                        resources.map(resource => (
+                                            <Resource key={ resource.title }>
+                                                <ResourceInfo>
+                                                    <ResourceTitle>{ resource.title }</ResourceTitle>
+                                                    <ResourceSource>Source: { resource.source || '-' }</ResourceSource>
+                                                </ResourceInfo>
+                                                <ExternalLinkButton to={ resource.url }>View</ExternalLinkButton>
+                                            </Resource>
+                                        ))
+                                    }
                             </CardBody>
                         </Card>
                     ))
