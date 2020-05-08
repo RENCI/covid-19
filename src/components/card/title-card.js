@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import styled from 'styled-components'
 import { Card } from './card'
 import { CardHeader } from './card-header'
 import { CardBody } from './card-body'
 import { Title } from '../typography'
+import { useWindowWidth } from '../../hooks'
 
 const Wrapper = styled.div`
     position: relative;
@@ -25,29 +26,45 @@ const TitleCardHeader = styled.div(({ theme }) => `
     left: 50%;
     top: -3rem;
     transform: translateX(-50%);
-    z-index: 9;
+    transition: min-width 250ms;
+    z-index: 1;
+    min-width: 50%;
+    @media (max-width: 798px) {
+        min-width: 90%;
+    }
     ${ Title } {
         color: ${ theme.color.white };
+        text-align: center;
+        width: 100%;
+        font-size: calc(12pt + 1vmin);
         padding: 0;
         margin: 0;
     }
 `)
 
-const TitleCardBody = styled.div(({ theme }) => `
+const TitleCardBody = styled.div(({ topPadding, theme }) => `
     flex: 1;
     padding: ${ theme.padding.normal };
-    padding-top: ${ theme.padding.extraLarge };
+    padding-top: calc(3 * ${ topPadding }px / 4);
     background-color: inherit;
 `)
 
 export const TitleCard = ({ title, children }) => {
+    const titleElement = useRef()
+    const [cardBodyTopPadding, setCardBodyTopPadding] = useState(0)
+    const { windowWidth } = useWindowWidth()
+    
+    useEffect(() => {
+        setCardBodyTopPadding(titleElement.current.scrollHeight)
+    }, [titleElement.current, windowWidth])
+
     return (
         <Wrapper>
-            <TitleCardHeader>
+            <TitleCardHeader ref={ titleElement }>
                 <Title>{ title }</Title>
             </TitleCardHeader>
             <Card>
-                <TitleCardBody>
+                <TitleCardBody topPadding={ cardBodyTopPadding }>
                     { children }
                 </TitleCardBody>
             </Card>
