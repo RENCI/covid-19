@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-export const Card = styled.div(({ theme }) => `
+export const Card = styled.div(({ theme, dark }) => `
     // & * { border: 1px solid #f99; }
     border-radius: ${ theme.border.radius };
     overflow: hidden;
@@ -9,7 +9,9 @@ export const Card = styled.div(({ theme }) => `
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: ${ theme.color.white };
+    background-color: ${ dark ? theme.color.primary.dark : theme.color.white };
+    color: ${ dark ? theme.color.white : theme.color.primary.dark };
+    opacity: ${ dark ? 0.75 : 1.0 };
     transition: filter 250ms;
     filter: drop-shadow(0 0 4px rgba(0, 0, 0, 0.1));
     &:hover {

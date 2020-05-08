@@ -21,11 +21,13 @@ const WorkPage = () => {
 
             <Title>Our Work</Title>
 
-            <section>
-                <Paragraph>
-                    We will update this page with the latest projects coming out of RENCI as our researchers and their partners work together to develop novel approaches for dealing with COVID-19.
-                </Paragraph>
-            </section>
+            <Card dark>
+                <CardBody>
+                    <Paragraph>
+                        We will update this page with the latest projects coming out of RENCI as our researchers and their partners work together to develop novel approaches for dealing with COVID-19.
+                    </Paragraph>
+                </CardBody>
+            </Card>
             
             {
                 work.map(item => (

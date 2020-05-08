@@ -79,12 +79,14 @@ const ResourcesPage = () => {
 
             <Title>General COVID-19 Resources</Title>
             
-            <section>
-                <Paragraph>
-                    The resources listed below have proven to be of interest at RENCI as we discuss the progression of COVID-19 and and its impact on research and our society.
-                    We have collected them here in case they are interesting to others also, although we do not take credit for or endorse the information within these links in any way.
-                </Paragraph>
-            </section>
+            <Card dark>
+                <CardBody>
+                    <Paragraph center>
+                        The resources listed below have proven to be of interest at RENCI as we discuss the progression of COVID-19 and and its impact on research and our society.
+                        We have collected them here in case they are interesting to others also, although we do not take credit for or endorse the information within these links in any way.
+                    </Paragraph>
+                </CardBody>
+            </Card>
             
             <ResourceButtons>
                 <ResourceButton onClick={ handleChangeActiveResources(-1) } active={ activeResourceType === -1 }>ALL ({ resources.reduce((sum, resource) => sum + resource.resources.length, 0) })</ResourceButton>

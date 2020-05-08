@@ -6,7 +6,6 @@ const CardBodyContents = styled.div(({ theme }) => `
     flex: 1;
     padding: ${ theme.padding.normal };
     background-color: inherit;
-    color: ${ theme.color.black };
 `)
 
 CardBodyContents.propTypes = {
