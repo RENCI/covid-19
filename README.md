@@ -69,9 +69,9 @@ To update Our Work or Resources content or to add a blog post, please make the a
 
 ## Development Contributions
 
-If you would like to contribute to the development of this site, feel free to propose changes with pull requests. As the `master` branch will always represent the deployed production version of the site, please branch feature branches off this branch.
+If you would like to contribute to the development of this site, feel free to propose changes with pull requests. The `master` branch will always represent the deployed production version of the site, so please branch feature branches off of `master`.
 
-For local development you will need `node` and the `gatsby-cli`. Once this repo is cloned, execute `gatsby develop` from the project root to spin up the development server which can be accessed on port 8000 by default. With the development server's built-in hot module reloading, changes can be seen and tested as they are made to the source code.
+For local development you will need `node` and the `gatsby-cli`. Once this repo is cloned, execute `npm i` to install all dependencies, after which `gatsby develop` can be run from the project root to spin up the development server, which is served on port 8000 by default. With the development server's built-in hot module reloading, changes can be seen and tested as they are made to the source code.
 
 Before submitting a pull request, please ensure your changes will result in a successful build. To test this execute
 
