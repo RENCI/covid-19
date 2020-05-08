@@ -9,8 +9,6 @@ import { useWork } from '../hooks'
 const WorkPage = () => {
     const work = useWork()
 
-    console.log(work)
-
     return (
         <PageContent>
             <SEO 
@@ -31,7 +29,7 @@ const WorkPage = () => {
             
             {
                 work.map(item => (
-                    <Card>
+                    <Card key={ item.frontmatter.title.toLowerCase().replace(' ', '-') }>
                         <CardHeader>{ item.frontmatter.title }</CardHeader>
                         <CardBody>
                             <div dangerouslySetInnerHTML={{ __html: item.html }} />
