@@ -16,11 +16,11 @@ const Form = styled.form(({ theme }) => `
         width: 100%;
         border-radius: ${ theme.border.radius };
         padding: 0.5rem;
-        border: 1px solid ${ theme.color.grey };
+        border: 1px solid ${ theme.color.primary.light }66;
         transition: box-shadow 500ms, border 250ms;
         &:focus {
             box-shadow: 0 0 6px 1px ${ theme.color.primary.light }66;
-            border: 1px solid ${ theme.color.primary.light };
+            border: 1px solid ${ theme.color.primary.light }66;
         }
     }
     & input {
