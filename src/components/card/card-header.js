@@ -6,14 +6,16 @@ export const CardHeader = styled.div(({ theme }) => `
     // justify-content: center;
     // align-items: center;
     // text-align: left;
-    color: ${ theme.color.darkgrey };
-    background: linear-gradient(#f3ffff 0%, ${ theme.color.white } 100%);
+    color: ${ theme.color.primary.dark };
+    background: linear-gradient(-30deg, ${ theme.color.primary.light }22 0%, ${ theme.color.white } 100%);
+    background-color: ${ theme.color.primary.light }11;
+    border-bottom: 1px solid ${ theme.color.primary.light }66;
     font-weight: bold;
     position: relative;
     font-size: 200%;
     min-height: 4rem;
     padding: ${ theme.padding.normal };
-    padding-bottom: 0;
+    // padding-bottom: 0;
 `)
 
 CardHeader.propTypes = {
