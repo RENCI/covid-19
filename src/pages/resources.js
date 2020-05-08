@@ -7,8 +7,7 @@ import { Title, Heading, Paragraph } from '../components/typography'
 import { Card, CardHeader, CardBody } from '../components/card'
 import { ExternalLinkButton } from '../components/link'
 import { Button } from '../components/button'
-
-const kebabCase = string => string.toLowerCase().replace(' ', '-')
+import { kebabCase } from '../util'
 
 const ResourceButtons = styled.div(({ theme }) => `
     display: flex;

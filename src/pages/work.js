@@ -5,6 +5,7 @@ import { SEO } from '../components/seo'
 import { Card, CardHeader, CardBody } from '../components/card'
 import { ExternalLink } from '../components/link'
 import { useWork } from '../hooks'
+import { kebabCase } from '../util'
 
 const WorkPage = () => {
     const work = useWork()
@@ -29,7 +30,7 @@ const WorkPage = () => {
             
             {
                 work.map(item => (
-                    <Card key={ item.frontmatter.title.toLowerCase().replace(' ', '-') }>
+                    <Card key={ kebabCase(item.frontmatter.title) }>
                         <CardHeader>{ item.frontmatter.title }</CardHeader>
                         <CardBody>
                             <div dangerouslySetInnerHTML={{ __html: item.html }} />
