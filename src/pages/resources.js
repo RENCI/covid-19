@@ -71,7 +71,6 @@ const ResourcesPage = () => {
         if (transitioning) {
             setTimeout(() => setTransitioning(false), 250)
         }
-        console.log(transitioning)
     }, [transitioning])
 
     const handleChangeActiveResources = index => event => {
