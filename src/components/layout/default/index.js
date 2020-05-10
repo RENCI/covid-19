@@ -12,7 +12,7 @@ import { useMenu } from '../../../hooks'
 import { Container as Grid, Row, Col } from 'react-grid-system'
 import { Paragraph } from '../../typography'
 import { ExternalLink } from '../../link'
-import { FacebookIcon, LinkedInIcon, TwitterIcon } from '../../icons'
+import { FacebookIcon, GithubIcon, LinkedInIcon, TwitterIcon } from '../../icons'
 import coronavirusImage from '../../../images/coronavirus.svg'
 import '../../../styles/normalize.css'
 import '../../../styles/customize.css'
@@ -78,6 +78,9 @@ export const DefaultLayout = ({ children }) => {
                                     </SocialLink>
                                     <SocialLink to="https://www.linkedin.com/company/renaissance-computing-institute/">
                                         <LinkedInIcon size={ 32 } fill={ theme.color.primary.main } />
+                                    </SocialLink>
+                                    <SocialLink to="https://github.com/RENCI/covid-19">
+                                        <GithubIcon size={ 32 } fill={ theme.color.primary.main } />
                                     </SocialLink>
                                 </Paragraph>
                             </Col>
