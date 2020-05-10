@@ -65,6 +65,7 @@ const ResourceSource = styled.div(({ theme }) => `
 const ResourcesPage = () => {
     const resources = useResources()
     const [activeResourceType, setActiveResourceType] = useState(-1)
+    const [activeResourceTypeButton, setActiveResourceTypeButton] = useState(-1)
     const [transitioning, setTransitioning] = useState(false)
 
     useLayoutEffect(() => {
@@ -74,6 +75,7 @@ const ResourcesPage = () => {
     }, [transitioning])
 
     const handleChangeActiveResources = index => event => {
+        setActiveResourceTypeButton(index)
         setTransitioning(true)
         setTimeout(() => setActiveResourceType(index), 250)
     }
@@ -96,7 +98,7 @@ const ResourcesPage = () => {
             <ResourceButtons role="tablist">
                 <ResourceButton
                     onClick={ handleChangeActiveResources(-1) }
-                    active={ activeResourceType === -1 }
+                    active={ activeResourceTypeButton === -1 }
                 >
                     ALL ({ resources.reduce((sum, resource) => sum + resource.resources.length, 0) })
                 </ResourceButton>
@@ -106,9 +108,10 @@ const ResourcesPage = () => {
                             key={ `${ category.title }_button` }
                             role="tab"
                             aria-controls={ `resources-${ i }` }
-                            aria-selected={ activeResourceType === i }
+                            aria-selected={ activeResourceTypeButton === i }
                             onClick={ handleChangeActiveResources(i) }
-                            active={ activeResourceType === i }
+                            active={ activeResourceTypeButton === i }
+                            disabled={ activeResourceTypeButton === i }
                         >
                             { category.title } ({ category.resources.length })
                         </ResourceButton>
