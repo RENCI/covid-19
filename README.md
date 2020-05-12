@@ -4,7 +4,7 @@
 
 This is the website for RENCI's COVID-19 response efforts. This site is built with [Gatsby](https://www.gatsbyjs.org), which is a free and open source framework based on [React](https://reactjs.org). Sites built with Gatsby are modern and _fast_. (To reduce bundle size and increase performance here, though, we use [Preact](https://preactjs.com/) instead of React)
 
-The site is served on [GitHub Pges](https://pages.github.com/) at [https://renci.github.io/covid-19](https://renci.github.io/covid-19), and [https://covid-19.renci.org](https://covid-19.renci.org) redirects to this location.
+The site is served on [GitHub Pages](https://pages.github.com/) at [https://renci.github.io/covid-19](https://renci.github.io/covid-19), and [https://covid-19.renci.org](https://covid-19.renci.org) redirects to this location.
 
 This site is rather small and consists of four main views: 
 - Home: information about to the general response efforts and relatied blog posts on renci.org
@@ -66,6 +66,42 @@ Much of the static content lives directly in the pages themselves (React compone
 ## Contributing Content
 
 To update Our Work or Resources content or to add a blog post, please make the appropriate changes to the source data files in the `./data` directory and submit a pull request.
+
+### Blog Posts and Resources
+
+Blog posts and Resources all live in singles files each, so editing is accomplished simply by following the existing format of each YAML file. 
+
+### Our Work
+
+Because Our Work items are a bit more detailed, each of these items resides in a separate Markdown file in the `'./src/data/work/` directory. Adding items for Our Work involves creating a new Markdown file in that directory. Please [kebab-case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles) the filename, as in `the-quick-brown-fox-jumps-over-the-lazy-dog.md`, with the Our Work item title. The structure of the Markdown file is as follows.
+
+```
+---
+title: The Quick Brown Fox Jumps Over the Lazy Dog
+---
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio eum tempore
+enim dolores itaque exercitationem voluptatibus iure illum laboriosam non,
+veniam reprehenderit cumque nobis, ut atque? Ut non eius modi!.
+
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit assumenda
+repellat, voluptates nihil veritatis iste eaque corporis voluptate excepturi
+maiores illum esse quibusdam neque explicabo dolorum aut, laborum accusamus
+laboriosam sapiente ut impedit. Quibusdam reprehenderit, eius a mollitia eos
+ex, neque amet laudantium maxime doloremque enim provident quisquam dolore
+recusandae inventore sunt veniam tempora blanditiis assumenda ab expedita
+voluptatibus asperiores.
+```
+
+Note that the title is places between a pair of triple dashed lines, and the content (in Markdown or HTML syntax) goes beneath that. Each Our Work item gets rendered as a card on the `/work` view. The title populates the card header, and the content occupies the body of the card.
+
+### Contribution Quick Reference
+
+| Content Type  | What to Edit  |
+| ------------- | ------------- |
+| Blog          | [./src/data/blog.yaml](https://github.com/RENCI/covid-19/blob/master/src/data/blog.yaml) |
+| Resources     | [./src/data/resources.yaml](https://github.com/RENCI/covid-19/blob/master/src/data/resources.yaml) |
+| Our Work      | [./src/data/work/\*\*\*.md](https://github.com/RENCI/covid-19/tree/master/src/data/work) |
+
 
 ## Development Contributions
 
