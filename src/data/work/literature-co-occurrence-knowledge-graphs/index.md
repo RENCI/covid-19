@@ -1,5 +1,8 @@
 ---
+path: /literature-co-occurrence-knowledge-graphs
 title: Literature Co-Occurrence Knowledge Graphs
+blurb: >
+    RENCI researchers have developed literature co-occurrence databases on COVID-19 based on the Semantic Scholar Open Research Dataset (CORD 19), a set of research papers covering COVID-19 and earlier coronaviruses.
 ---
 
 RENCI researchers have developed literature co-occurrence databases on COVID-19 based on the Semantic Scholar Open Research Dataset ([CORD 19](https://www.semanticscholar.org/cord19)), a set of research papers covering COVID-19 and earlier coronaviruses.

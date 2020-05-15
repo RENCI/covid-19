@@ -2,7 +2,9 @@ import React from 'react'
 import { Title, Paragraph } from '../components/typography'
 import { PageContent } from '../components/layout'
 import { SEO } from '../components/seo'
+import { Link } from 'gatsby'
 import { TitleCard, Card, CardHeader, CardBody } from '../components/card'
+import { LinkButton } from '../components/link'
 import { ExternalLink } from '../components/link'
 import { useWork } from '../hooks'
 import { kebabCase } from '../util'
@@ -29,7 +31,11 @@ const WorkPage = () => {
                     <Card key={ kebabCase(item.frontmatter.title) }>
                         <CardHeader>{ item.frontmatter.title }</CardHeader>
                         <CardBody>
-                            <div dangerouslySetInnerHTML={{ __html: item.html }} />
+                            <div dangerouslySetInnerHTML={{ __html: item.frontmatter.blurb }} />
+                            <br/>
+                            <Paragraph center>
+                                <LinkButton to={ item.frontmatter.path }>Read More</LinkButton>
+                            </Paragraph>
                         </CardBody>
                     </Card>
                 ))
