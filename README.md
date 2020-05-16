@@ -25,7 +25,7 @@ $ tree -L 2
 ├── gatsby-ssr.js
 ├── LICENSE
 ├── node_modules
-│   ...
+│   ├── ... {{contents omitted}}
 ├── package.json
 ├── package-lock.json
 ├── public
@@ -52,14 +52,18 @@ $ tree -L 2
 Much of the static content lives directly in the pages themselves (React components in the `./pages` directory). The `./data` directory consists of source data for managing content that is subject to frequent change. The content for the Our Work and Resource views lives here, as does the list of blog posts rendered on the Home view.
 
 ```bash
- $ tree -L 2 ./src/data/
-./src/data/
+$ tree -L 3 ./src/data
+./src/data
 ├── blog.yaml
 ├── index.js
 ├── resources.yaml
 └── work
-    ├── answering-biomedical-questions.md
-    └── literature-co-occurrence-knowledge-graphs.md
+    ├── answering-biomedical-questions
+    │   └── index.md
+    ├── apogee
+    │   └── index.md
+    └── literature-co-occurrence-knowledge-graphs
+        └── index.md
 
 ```
 
@@ -73,15 +77,20 @@ Blog posts and Resources all live in singles files each, so editing is accomplis
 
 ### Our Work
 
-Because Our Work items are a bit more detailed, each of these items resides in a separate Markdown file in the `'./src/data/work/` directory. Adding items for Our Work involves creating a new Markdown file in that directory. Please [kebab-case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles) the filename, as in `the-quick-brown-fox-jumps-over-the-lazy-dog.md`, with the Our Work item title. The structure of the Markdown file is as follows.
+Because Our Work items are a bit more detailed, each of these items resides in a directory in the `'./src/data/work/` directory. Adding items for Our Work involves creating a directory for the item, inside of which resides the copy and assets for the Our Work item. A Markdown file (index.md) is the minimum requirement to create an Our Work item. Assets referenced in the Markdown should also live in that same directory with references given as relative paths to these assets. To make finding Our Work items easily, please [kebab-case](https://en.wikipedia.org/wiki/Letter_case#Special_case_styles) the directory name, as in `a-quick-brown-fox-jumps-over-the-lazy-dog`, with the Our Work item title. The structure of the Markdown file is as follows.
 
 ```
 ---
+path: /quick-brown-fox
 title: The Quick Brown Fox Jumps Over the Lazy Dog
+blurb: >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit similique nemo a optio.
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio eum tempore
 enim dolores itaque exercitationem voluptatibus iure illum laboriosam non,
 veniam reprehenderit cumque nobis, ut atque? Ut non eius modi!.
+
+![A brown fox jumping over a lazy dog](fox-and-dog.png)
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit assumenda
 repellat, voluptates nihil veritatis iste eaque corporis voluptate excepturi
@@ -92,7 +101,16 @@ recusandae inventore sunt veniam tempora blanditiis assumenda ab expedita
 voluptatibus asperiores.
 ```
 
-Note that the title is places between a pair of triple dashed lines, and the content (in Markdown or HTML syntax) goes beneath that. Each Our Work item gets rendered as a card on the `/work` view. The title populates the card header, and the content occupies the body of the card.
+In this example the directory contents would look like the following.
+
+```bash
+$ tree ./src/data/work/a-quick-brown-fox-jumps-over-the-lazy-dog
+./src/data/work/a-quick-brown-fox-jumps-over-the-lazy-dog
+├── index.md
+├── fox-and-dog.png
+```
+
+Note the section of between the pair of three dashes at the top of the Markdown file. This section, called the frontmatter, contains three required fields to publish an Our Work item: path, title, and blurb. The main content (in Markdown or HTML syntax) goes beneath that. Each Our Work item gets used in two places. The first place work items are rendered is as cards in the list on the [/work view](https://covid-19.renci.org/work). The title populates the card header, and the blurb occupies the body of the card. Each of these cards receives a button to "Read More," which links to a specifc page (accessible at the path specified in the frontmatter) that contains the transformed Markdown content.
 
 ### Contribution Quick Reference
 
@@ -100,7 +118,7 @@ Note that the title is places between a pair of triple dashed lines, and the con
 | ------------- | ------------- |
 | Blog          | [./src/data/blog.yaml](https://github.com/RENCI/covid-19/blob/master/src/data/blog.yaml) |
 | Resources     | [./src/data/resources.yaml](https://github.com/RENCI/covid-19/blob/master/src/data/resources.yaml) |
-| Our Work      | [./src/data/work/\*\*\*.md](https://github.com/RENCI/covid-19/tree/master/src/data/work) |
+| Our Work      | [./src/data/work/*](https://github.com/RENCI/covid-19/tree/master/src/data/work) |
 
 
 ## Development Contributions
