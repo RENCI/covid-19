@@ -70,17 +70,17 @@ export const DefaultLayout = ({ children }) => {
                             </Col>
                             <Col xs={ 12 } sm={ 6 }>
                                 <Paragraph center={ isCompact } right={ !isCompact }>
-                                    <SocialLink to="https://twitter.com/RENCI">
-                                        <TwitterIcon size={ 32 } fill={ theme.color.primary.main } />
+                                    <SocialLink to="https://twitter.com/RENCI" aria-label="View our Twitter">
+                                        <TwitterIcon size={ 32 } fill={ theme.color.primary.main } aria-hidden="true" />
                                     </SocialLink>
-                                    <SocialLink to="https://www.facebook.com/renci.org/">
-                                        <FacebookIcon size={ 32 } fill={ theme.color.primary.main } />
+                                    <SocialLink to="https://www.facebook.com/renci.org/" aria-label="View our Facebook page">
+                                        <FacebookIcon size={ 32 } fill={ theme.color.primary.main } aria-hidden="true" />
                                     </SocialLink>
-                                    <SocialLink to="https://www.linkedin.com/company/renaissance-computing-institute/">
-                                        <LinkedInIcon size={ 32 } fill={ theme.color.primary.main } />
+                                    <SocialLink to="https://www.linkedin.com/company/renaissance-computing-institute/" aria-label="View our LinkedIn Profile">
+                                        <LinkedInIcon size={ 32 } fill={ theme.color.primary.main } aria-hidden="true" />
                                     </SocialLink>
-                                    <SocialLink to="https://github.com/RENCI/covid-19">
-                                        <GithubIcon size={ 32 } fill={ theme.color.primary.main } />
+                                    <SocialLink to="https://github.com/RENCI/covid-19" aria-label="View the GitHub repository for this site">
+                                        <GithubIcon size={ 32 } fill={ theme.color.primary.main } aria-hidden="true" />
                                     </SocialLink>
                                 </Paragraph>
                             </Col>

@@ -56,7 +56,7 @@ const ResourceTitle = styled(Heading)`
 `
 
 const ResourceSource = styled.div(({ theme }) => `
-    color: ${ theme.color.grey };
+    color: ${ theme.color.darkgrey };
     @media (max-width: 798px) {
         margin-bottom: ${ theme.padding.normal };
     }

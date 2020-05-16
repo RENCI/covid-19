@@ -26,7 +26,7 @@ const MenuItem = styled(Link)(({ theme }) => `
     height: 100%;
     text-decoration: none;
     text-transform: uppercase;
-    color: ${ theme.color.primary.main };
+    color: ${ theme.color.primary.dark };
     padding: 1rem 0;
     font-size: 100%;
     @media (min-width: 900px) {
@@ -42,7 +42,7 @@ const MenuItem = styled(Link)(({ theme }) => `
     }
     &.active, &.active:hover, &.active:focus {
         filter: brightness(1.0);
-        color: ${ theme.color.primary.dark };
+        color: ${ theme.color.primary.main };
     }
 `)
 
@@ -54,7 +54,7 @@ const Marker = styled.div(({ theme, x, y, width }) => `
     width: 100%;
     height: 6px;
     border-radius: ${ theme.border.radius };
-    background-color: ${ theme.color.primary.dark };
+    background-color: ${ theme.color.primary.main };
     transition: opacity 250ms;
     transition: transform 150ms ease-out, max-width 250ms, opacity 1000ms;
     transform: translateX(${ x }px);
