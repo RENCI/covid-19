@@ -136,8 +136,8 @@ export const MobileMenu = ({ items }) => {
 
     return (
         <Wrapper>
-            <Toggler onClick={ handleToggleMenu } id="menu-toggler" aria-controls="menu-drawer">
-                { visible ? <CloseIcon size="36" fill={ theme.color.white } /> : <HamburgerIcon size="36" fill={ theme.color.black }  /> }
+            <Toggler onClick={ handleToggleMenu } id="menu-toggler" aria-controls="menu-drawer" aria-label="Toggle menu">
+                { visible ? <CloseIcon size="36" fill={ theme.color.white } aria-hidden="true" /> : <HamburgerIcon size="36" fill={ theme.color.black } aria-hidden="true" /> }
             </Toggler>
             <Drawer active={ visible } onKeyDown={ e => console.log(e) } aria-expanded={ visible } id="menu-drawer" aria-labelledby="menu-toggler">
                 <Nav>
