@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby'
 
 const articlesQuery = graphql`{
-    resources: allBlogYaml {
+    resources: allBlogYaml(sort: {fields: date, order: DESC}) {
         edges {
             node {
                 date
