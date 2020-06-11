@@ -4,7 +4,7 @@ const articlesQuery = graphql`{
     resources: allBlogYaml(sort: {fields: date, order: DESC}) {
         edges {
             node {
-                date
+                date(formatString: "MMMM d, YYYY")
                 title
                 url
             }
