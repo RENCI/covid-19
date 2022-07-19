@@ -1,8 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import styled from 'styled-components'
 import { Card } from './card'
-import { CardHeader } from './card-header'
-import { CardBody } from './card-body'
 import { Title } from '../typography'
 import { useWindowWidth } from '../../hooks'
 

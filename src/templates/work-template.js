@@ -1,9 +1,8 @@
 import React from 'react'
 import { SEO } from '../components/seo'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import { PageContent } from '../components/layout'
-import { Title, Paragraph } from '../components/typography'
-import { Card, CardHeader, CardBody, CardFooter, TitleCard } from '../components/card'
+import { TitleCard } from '../components/card'
 
 export default ({ data, pageContext }) => {
     const { markdownRemark: { frontmatter, html } } = data

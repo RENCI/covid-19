@@ -1,7 +1,7 @@
 import React from 'react'
 import { PageContent } from '../components/layout'
 import { SEO } from '../components/seo'
-import { Title, Paragraph } from '../components/typography'
+import { Paragraph } from '../components/typography'
 import { TitleCard, Card, CardHeader, CardBody } from '../components/card'
 import { BulletedList, ListItem } from '../components/list'
 import { ContactForm } from '../components/forms'

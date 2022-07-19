@@ -1,11 +1,9 @@
 import React from 'react'
-import { Title, Paragraph } from '../components/typography'
+import { Paragraph } from '../components/typography'
 import { PageContent } from '../components/layout'
 import { SEO } from '../components/seo'
-import { Link } from 'gatsby'
 import { TitleCard, Card, CardHeader, CardBody } from '../components/card'
 import { LinkButton } from '../components/link'
-import { ExternalLink } from '../components/link'
 import { useWork } from '../hooks'
 import { kebabCase } from '../util'
 

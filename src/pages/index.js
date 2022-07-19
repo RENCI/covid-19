@@ -1,6 +1,6 @@
 import React from 'react'
 import { PageContent } from '../components/layout'
-import { Title, Heading, Paragraph } from '../components/typography'
+import { Heading, Paragraph } from '../components/typography'
 import { SEO } from '../components/seo'
 import { TitleCard, Card, CardHeader, CardBody } from '../components/card'
 import { BulletedList, ListItem } from '../components/list'
