@@ -7,6 +7,7 @@ const workQuery = graphql`{
                 frontmatter {
                     path
                     title
+                    active
                     blurb
                 }
                 html
