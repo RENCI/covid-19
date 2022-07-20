@@ -1,6 +1,7 @@
 ---
 path: /black-balsam
 title: Blackbalsam
+active: false
 blurb: >
     As the COVID-19 pandemic progressed, researchers around the world began conducting analyses and visualization on an increasingly varied set of COVID-19 data. To facilitate analytics related to COVID-19, RENCI scientists developed the Blackbalsam digital data science laboratory, a readily available suite of tools and COVID-19 data housed in a common digital environment.
 ---

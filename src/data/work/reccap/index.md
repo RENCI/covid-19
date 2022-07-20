@@ -1,6 +1,7 @@
 ---
 path: /reccap
 title: ReCCAP
+active: false
 blurb: >
     RENCI researchers are supporting the ReCCAP UNC study to assess the effectiveness of COVID-19 preventive measures in keeping UNC workers safe as labs re-open across campus. The study is helping to advance research by offering free testing for COVID-19 antibodies and virus to members of UNC’s extended research community to monitor disease outbreak and reduce virus transmission.
 ---

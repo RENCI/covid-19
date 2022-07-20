@@ -1,6 +1,7 @@
 ---
 path: /data-travels
 title: Case Study of Data Travels
+active: false
 blurb: >
     RENCI scientists received a grant from the NC Policy Collaboratory to help fund their “Case Study of Data Travels,” a project summarizing all of the ways COVID-19 data is being collected and used throughout North Carolina.
 ---

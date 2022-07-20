@@ -1,6 +1,7 @@
 ---
 path: /answering-biomedical-questions
 title: Answering Biomedical Questions
+active: false
 blurb: >
     RENCI scientists are supporting rapid exploration of data by building a COVID-19 version of their question-answering system called Reasoning Over Biomedical Objects linked in Knowledge Oriented Pathways, or ROBOKOP.
 

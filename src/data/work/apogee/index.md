@@ -1,6 +1,7 @@
 ---
 path: /apogee
 title: APOGEE
+active: false
 blurb: >
     The APOGEE (mAss-PrOduced Gravity drivE vEntilator) prototype design will cost no more than $1,000 to produce and requires only a source of 12V power, compressed air, compressed oxygen, and tap water to function. These features make the device highly reproducible and mobile.
 ---
