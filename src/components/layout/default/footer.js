@@ -5,7 +5,7 @@ export const Footer = styled.footer(({ theme }) => `
     color: #ccc;
     padding: 2rem;
     filter: drop-shadow(0 0 0.2rem rgba(0, 0, 0, 0.25));
-    margin-top: -16rem;
+    /* margin-top: -16rem; */
     padding-top: 10rem;
     padding-bottom: 3rem;
     z-index: 0;
