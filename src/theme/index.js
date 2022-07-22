@@ -27,7 +27,7 @@ export const theme = {
         width: '1px',
     },
     padding: {
-        small: '1rem',
+        small: '1.5rem',
         normal: '2rem',
         large: '3rem',
         extraLarge: '4rem',
