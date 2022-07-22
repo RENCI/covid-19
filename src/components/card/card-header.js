@@ -12,9 +12,9 @@ export const CardHeader = styled.div(({ theme }) => `
     border-bottom: 1px solid ${ theme.color.primary.light }66;
     font-weight: bold;
     position: relative;
-    font-size: 200%;
-    min-height: 4rem;
-    padding: ${ theme.padding.normal };
+    font-size: 150%;
+    min-height: 3.5rem;
+    padding: ${ theme.padding.small };
     // padding-bottom: 0;
 `)
 

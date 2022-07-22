@@ -47,7 +47,7 @@ const TitleCardBody = styled.div(({ topPadding, theme }) => `
     background-color: inherit;
 `)
 
-export const TitleCard = ({ title, children }) => {
+export const TitleCard = ({ title, children, noBody }) => {
     const titleElement = useRef()
     const [cardBodyTopPadding, setCardBodyTopPadding] = useState(0)
     const { windowWidth } = useWindowWidth()
@@ -61,11 +61,20 @@ export const TitleCard = ({ title, children }) => {
             <TitleCardHeader ref={ titleElement }>
                 <Title>{ title }</Title>
             </TitleCardHeader>
-            <Card>
+            {/* <Card style={{visibility: noBody ? "hidden" : "visible"}}>
                 <TitleCardBody topPadding={ cardBodyTopPadding }>
                     { children }
                 </TitleCardBody>
-            </Card>
+            </Card> */}
+            { !noBody ? (
+                <Card>
+                    <TitleCardBody topPadding={ cardBodyTopPadding }>
+                        { children }
+                    </TitleCardBody>
+                </Card>
+            ) : (
+                <div style={{minHeight:'100px'}}/>
+            )}
         </Wrapper>
     )
 }

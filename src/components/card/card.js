@@ -5,7 +5,7 @@ export const Card = styled.div(({ theme, dark }) => `
     // & * { border: 1px solid #f99; }
     border-radius: ${ theme.border.radius };
     overflow: hidden;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     height: 100%;
     display: flex;
     flex-direction: column;
