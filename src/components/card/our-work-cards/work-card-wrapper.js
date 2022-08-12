@@ -15,6 +15,6 @@ export const WorkCardWrapper = ({ children }) => {
     )
 }
 
-WorkCardWrapper.PropTypes = {
+WorkCardWrapper.propTypes = {
     children: PropTypes.node.isRequired,
 }
