@@ -1,61 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: `RENCI's COVID-19 Response`,
-    description: `RENCI's COVID-19 Response`,
+    title: `RENCI COVID-19 Site`,
+    description: `RENCI's COVID-19 REsponse`,
     author: `mbwatson`,
+    siteUrl: `https://www.yourdomain.tld`,
     menuItems:[
       { text: 'Home', path: '/', },
       { text: 'Our Work', path: '/work/', },
       { text: 'Resources', path: '/resources/', },
       { text: 'Contact', path: '/contact/', },
     ],
+
   },
   plugins: [
-    `gatsby-plugin-preact`,
-    `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-styled-components`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${ __dirname }/src/data`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${ __dirname }/src/images`,
-      },
-    },
-   {
-    resolve: `gatsby-transformer-remark`,
-    options: {
-      plugins: [
-        {
-          resolve: "gatsby-remark-external-links",
-          options: {
-            target: "_blank",
-            rel: "noopener noreferrer"
-          }
-        },
-      ]
-    }
-  },
-  `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `renci-covid-19-response`,
-        short_name: `renci`,
-        start_url: `/`,
-        background_color: `#3b75a3`,
-        theme_color: `#3b75a3`,
-        display: `minimal-ui`,
-        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
-      },
-    },
-    `gatsby-transformer-yaml`,
+    "gatsby-plugin-styled-components", 
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -76,10 +34,39 @@ module.exports = {
         siteSpeedSampleRate: 10, // This setting determines how often site speed beacons will be sent. By default, 1% of users will be automatically be tracked.
         cookieDomain: "renci.github.io", // Specifies the domain used to store the analytics cookie. Setting this to 'none' sets the cookie without specifying a domain.
       },
+
+    }, 
+    "gatsby-plugin-image", 
+    "gatsby-plugin-react-helmet", 
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: `renci-covid-19-response`,
+        short_name: `renci`,
+        start_url: `/`,
+        background_color: `#3b75a3`,
+        theme_color: `#3b75a3`,
+        display: `minimal-ui`,
+        icon: `src/images/favicon.png`, // This path is relative to the root of the site.
+      }
+    }, 
+    "gatsby-transformer-remark", 
+    `gatsby-transformer-yaml`,
+    "gatsby-plugin-sharp", 
+    "gatsby-transformer-sharp", 
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${ __dirname }/src/data`,
+      },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${ __dirname }/src/images`,
+      },
+    },
   ],
   pathPrefix: "/covid-19",
-}
+};
