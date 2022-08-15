@@ -5,6 +5,7 @@ import { SEO } from '../components/seo'
 import { TitleCard } from '../components/card'
 import { useWork } from '../hooks'
 import { WorkCard, WorkCardWrapper } from '../components/card/our-work-cards'
+import { Masonry } from 'masonic'
 
 const WorkPage = () => {
   const work = useWork()
