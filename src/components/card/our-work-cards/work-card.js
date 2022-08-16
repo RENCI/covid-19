@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
 import { Card, CardHeader, CardBody } from '../../../components/card'
 import { kebabCase } from '../../../util'
 import { Paragraph } from '../../../components/typography'
