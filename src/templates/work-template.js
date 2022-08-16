@@ -1,15 +1,15 @@
 import React from 'react'
-import { SEO } from '../components/seo'
+import { Seo } from '../components/seo'
 import { graphql } from 'gatsby'
 import { PageContent } from '../components/layout'
 import { TitleCard } from '../components/card'
 
-export default ({ data, pageContext }) => {
+const WorkPage = ({ data, pageContext }) => {
     const { markdownRemark: { frontmatter, html } } = data
 
     return (
         <PageContent>
-            <SEO 
+            <Seo 
                 title={ frontmatter.title }
                 description={ frontmatter.blurb }
                 keywords=""
@@ -35,3 +35,4 @@ export const workItemQuery = graphql`
         }
     }
 `
+export default WorkPage

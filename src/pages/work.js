@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { Paragraph } from '../components/typography'
 import { PageContent } from '../components/layout'
-import { SEO } from '../components/seo'
+import { Seo } from '../components/seo'
 import { TitleCard } from '../components/card'
 import { useWork } from '../hooks'
 import { WorkCard } from '../components/card/our-work-cards'
@@ -15,7 +15,7 @@ const WorkPage = () => {
   })
 return (
     <PageContent>
-      <SEO 
+      <Seo 
         title="Our Work"
         description=""
         keywords=""

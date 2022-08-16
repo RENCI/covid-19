@@ -1,11 +1,11 @@
 import React from 'react'
 import { PageContent } from '../components/layout'
 import { Title, Paragraph } from '../components/typography'
-import { SEO } from '../components/seo'
+import { Seo } from '../components/seo'
 
 const NotFoundPage = () => (
     <PageContent>
-        <SEO 
+        <Seo 
             title="404: Not found"
             description=""
             keywords=""

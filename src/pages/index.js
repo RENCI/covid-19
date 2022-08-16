@@ -1,7 +1,7 @@
 import React from 'react'
 import { PageContent } from '../components/layout'
 import { Heading, Paragraph } from '../components/typography'
-import { SEO } from '../components/seo'
+import { Seo } from '../components/seo'
 import { TitleCard, Card, CardHeader, CardBody } from '../components/card'
 import { BulletedList, ListItem } from '../components/list'
 import { ExternalLink } from '../components/link'
@@ -12,7 +12,7 @@ const IndexPage = () => {
 
     return (
         <PageContent>
-            <SEO 
+            <Seo 
                 title="Home"
                 description=""
                 keywords=""
