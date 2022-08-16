@@ -10,9 +10,8 @@ import { Masonry } from 'masonic'
 const WorkPage = () => {
   const work = useWork()
   const activeWork = work.filter(item =>  (item.frontmatter.active === true))
-  const pastWork = work.filter(item => {
-    return item.frontmatter.active === false
-  })
+  const pastWork = work.filter(item => (item.frontmatter.active === false))
+  
 return (
     <PageContent>
       <Seo 
