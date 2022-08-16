@@ -1,5 +1,5 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { useBrand } from '../../hooks'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
@@ -15,9 +15,14 @@ export const BrandContainer = styled(Link).attrs({ to: '/' })(({ theme }) => `
 
 export const Brand = ({ path = '/', height = 'auto', width = 'auto', style }) => {
     const renciLogo = useBrand()
+
     return (
         <BrandContainer to={ path } >
-            <Img fixed={ renciLogo.fixed } style={{ width: width, height: '100%' }} alt="RENCI logo" />
+            <GatsbyImage
+                image={ renciLogo.data.imageSharp.childImageSharp.gatsbyImageData }
+                alt="RENCI logo"
+                style={{ width: width, height: '100%' }}
+            />
         </BrandContainer>
     )
 }

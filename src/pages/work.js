@@ -1,17 +1,20 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Paragraph } from '../components/typography'
 import { PageContent } from '../components/layout'
-import { SEO } from '../components/seo'
+import { Seo } from '../components/seo'
 import { TitleCard } from '../components/card'
 import { useWork } from '../hooks'
-import { WorkCard, WorkCardWrapper } from '../components/card/our-work-cards'
+import { WorkCard } from '../components/card/our-work-cards'
+import { Masonry } from 'masonic'
 
 const WorkPage = () => {
   const work = useWork()
-
-  return (
+  const activeWork = work.filter(item =>  (item.frontmatter.active === true))
+  const pastWork = work.filter(item => (item.frontmatter.active === false))
+  
+return (
     <PageContent>
-      <SEO 
+      <Seo 
         title="Our Work"
         description=""
         keywords=""
@@ -23,31 +26,21 @@ const WorkPage = () => {
         </Paragraph>
       </TitleCard>
 
-      <WorkCardWrapper>
-        {
-          work.map(item => (
-            <Fragment>
-              {item.frontmatter.active && <WorkCard project={item.frontmatter}/>}
-            </Fragment>
-          ))
-        }
-      </WorkCardWrapper>
+      <Masonry 
+        items={activeWork} 
+        columnGutter={24}
+        columnWidth={300}
+        render={WorkCard}
+      />
 
       <TitleCard title="Past Projects" noBody/>
       
-      {/* <div style={{minHeight:'100px'}}></div> */}
-
-      <WorkCardWrapper>
-        {
-          work.map(item => (
-            <Fragment>
-              {!item.frontmatter.active && <WorkCard project={item.frontmatter}/>}
-            </Fragment>
-          ))
-        }
-      </WorkCardWrapper>
-
-      {/* <div style={{minHeight:'200px'}}></div> */}
+      <Masonry 
+        items={pastWork} 
+        columnGutter={24}
+        columnWidth={300}
+        render={WorkCard}
+      />
 
     </PageContent>
   )

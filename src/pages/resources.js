@@ -1,7 +1,7 @@
 import React, { useLayoutEffect, useState } from 'react'
 import styled from 'styled-components'
 import { PageContent } from '../components/layout'
-import { SEO } from '../components/seo'
+import { Seo } from '../components/seo'
 import { useResources } from '../hooks'
 import { Heading, Paragraph } from '../components/typography'
 import { TitleCard, Card, CardHeader, CardBody } from '../components/card'
@@ -82,7 +82,7 @@ const ResourcesPage = () => {
 
     return (
         <PageContent>
-            <SEO 
+            <Seo 
                 title="COVID-19 Resources"
                 description=""
                 keywords=""

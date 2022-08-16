@@ -1,6 +1,6 @@
 import React from 'react'
 import { PageContent } from '../components/layout'
-import { SEO } from '../components/seo'
+import { Seo } from '../components/seo'
 import { Paragraph } from '../components/typography'
 import { TitleCard, Card, CardHeader, CardBody } from '../components/card'
 import { BulletedList, ListItem } from '../components/list'
@@ -9,7 +9,7 @@ import { ContactForm } from '../components/forms'
 const ContactPage = () => {
     return (
         <PageContent>
-            <SEO 
+            <Seo 
                 title="Contact"
                 description=""
                 keywords=""

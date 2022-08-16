@@ -1,61 +1,39 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "renci-covid-19-site",
+  "version": "1.0.0",
   "private": true,
-  "description": "RENCI's COVID-19 Response",
-  "version": "0.1.0",
-  "author": "Matt Watson <mwatson@renci.org>",
-  "dependencies": {
-    "babel-plugin-styled-components": "^1.10.7",
-    "gatsby": "^2.20.10",
-    "gatsby-cli": "^4.19.0",
-    "gatsby-image": "^2.2.30",
-    "gatsby-plugin-anchor-links": "^1.1.1",
-    "gatsby-plugin-google-analytics": "^2.3.1",
-    "gatsby-plugin-manifest": "^2.3.3",
-    "gatsby-plugin-offline": "^3.0.17",
-    "gatsby-plugin-preact": "^3.2.1",
-    "gatsby-plugin-react-helmet": "^3.1.13",
-    "gatsby-plugin-sharp": "^2.5.3",
-    "gatsby-plugin-styled-components": "^3.2.1",
-    "gatsby-remark-external-links": "0.0.4",
-    "gatsby-source-filesystem": "^2.1.35",
-    "gatsby-transformer-remark": "^2.8.7",
-    "gatsby-transformer-sharp": "^2.4.3",
-    "gatsby-transformer-yaml": "^2.3.1",
-    "preact": "^10.3.4",
-    "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
-    "react-grid-system": "^6.3.0",
-    "react-helmet": "^5.2.1",
-    "react-spring": "^8.0.27",
-    "styled-components": "^5.0.1"
-  },
-  "devDependencies": {
-    "gh-pages": "^3.0.0",
-    "prettier": "^1.18.2"
-  },
+  "description": "renci-covid-19-site",
+  "author": "Suejin Kim",
   "keywords": [
-    "renci",
-    "covid-19",
-    "coronavirus"
+    "gatsby"
   ],
-  "license": "MIT",
   "scripts": {
-    "build": "gatsby clean && gatsby build",
     "develop": "gatsby develop",
-    "deploy": "gatsby clean && gatsby build --prefix-paths && gh-pages -d public",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "npm run develop",
-    "cleanstart": "gatsby clean && gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "clean": "gatsby clean"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/renci/covid-19"
-  },
-  "bugs": {
-    "url": "https://github.com/renci/covid-19/issues"
+  "dependencies": {
+    "babel-plugin-styled-components": "^2.0.7",
+    "gatsby": "^4.20.0",
+    "gatsby-plugin-google-analytics": "^4.20.0",
+    "gatsby-plugin-image": "^2.20.0",
+    "gatsby-plugin-manifest": "^4.20.0",
+    "gatsby-plugin-react-helmet": "^5.20.0",
+    "gatsby-plugin-sharp": "^4.20.0",
+    "gatsby-plugin-styled-components": "^5.20.0",
+    "gatsby-source-filesystem": "^4.20.0",
+    "gatsby-transformer-remark": "^5.20.0",
+    "gatsby-transformer-sharp": "^4.20.0",
+    "gatsby-transformer-yaml": "^4.20.0",
+    "masonic": "^3.6.5",
+    "prop-types": "^15.8.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-grid-system": "^8.1.6",
+    "react-helmet": "^6.1.0",
+    "react-spring": "^9.5.2",
+    "styled-components": "^5.3.5"
   }
 }

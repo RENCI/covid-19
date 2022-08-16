@@ -1,31 +1,30 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
 import { Card, CardHeader, CardBody } from '../../../components/card'
 import { kebabCase } from '../../../util'
 import { Paragraph } from '../../../components/typography'
 import { LinkButton } from '../../../components/link'
 
-export const WorkCard = ({ project }) => {
+export const WorkCard = ({  data: {frontmatter}  }) => {
   return (
     <Card
-        key={ kebabCase(project.title) } 
+      key={ kebabCase(frontmatter.title) } 
         style={{
             flex: '1 0 315px', 
             minHeight: '470px', 
             maxWidth: '600px'
         }}
     >
-        <CardHeader>{ project.title }</CardHeader>
+        <CardHeader>{ frontmatter.title }</CardHeader>
         <CardBody style={{
             display: 'flex', 
             flexDirection: 'column', 
             alignContent: 'space-between' 
         }}>
-        <div dangerouslySetInnerHTML={{ __html: project.blurb }} style={{flex: '1'}}/>
+        <div dangerouslySetInnerHTML={{ __html: frontmatter.blurb }} style={{flex: '1'}}/>
         <br/>
         <Paragraph center>
-            <LinkButton to={ project.path }>Read More</LinkButton>
+            <LinkButton to={ frontmatter.path }>Read More</LinkButton>
         </Paragraph>
         </CardBody>
     </Card>
