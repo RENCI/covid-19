@@ -54,7 +54,7 @@ export const TitleCard = ({ title, children, noBody }) => {
     
     useEffect(() => {
         setCardBodyTopPadding(titleElement.current.scrollHeight)
-    }, [titleElement.current, windowWidth])
+    }, [windowWidth])
 
     return (
         <Wrapper>
