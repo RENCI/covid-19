@@ -153,7 +153,7 @@ Barring any build errors, the production will be available at https://renci.gith
 
 - [React](https://reactjs.org/)
     + [Gatsby](https://www.gatsbyjs.org/)
-    + [Preact](https://preactjs.com/)
+    + [React](https://reactjs.org/)
 - Data Sources
     + [Markdown](https://www.markdownguide.org/basic-syntax/)
     + [YAML](https://en.wikipedia.org/wiki/YAML)
