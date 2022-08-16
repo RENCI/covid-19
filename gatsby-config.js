@@ -3,7 +3,7 @@ module.exports = {
     title: `RENCI COVID-19 Site`,
     description: `RENCI's COVID-19 REsponse`,
     author: `mbwatson`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://www.covid-19.renci.org`,
     menuItems:[
       { text: 'Home', path: '/', },
       { text: 'Our Work', path: '/work/', },
