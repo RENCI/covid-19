@@ -1,5 +1,16 @@
 import { graphql, useStaticQuery } from 'gatsby'
 
+const imageQuery = graphql`
+    query {
+        imageSharp: file(relativePath: {eq: "renci.png"}) {
+            id
+            childImageSharp {
+              gatsbyImageData(layout: FIXED)
+            }
+        }
+    }
+`
+
 const logoQuery = graphql`{
     allImageSharp(filter: {fluid: {originalImg: {regex: "/renci.png/"}}}) {
         edges {
@@ -29,8 +40,8 @@ const logoQuery = graphql`{
 }`
 
 export const useBrand = () => {
-    const data = useStaticQuery(logoQuery)
-    const fluid = data.allImageSharp.edges[0].node.fluid
-    const fixed = data.allImageSharp.edges[0].node.fixed
-    return { fluid, fixed }
+    const data = useStaticQuery(imageQuery)
+    // const fluid = data.allImageSharp.edges[0].node.fluid
+    // const fixed = data.allImageSharp.edges[0].node.fixed
+    return { data }
 }
