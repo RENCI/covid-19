@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import { Paragraph } from '../components/typography'
 import { PageContent } from '../components/layout'
 import { Seo } from '../components/seo'
