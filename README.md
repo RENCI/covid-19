@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is the website for RENCI's COVID-19 response efforts. This site is built with [Gatsby](https://www.gatsbyjs.org), which is a free and open source framework based on [React](https://reactjs.org). Sites built with Gatsby are modern and _fast_. (To reduce bundle size and increase performance here, though, we use [Preact](https://preactjs.com/) instead of React)
+This is the website for RENCI's COVID-19 response efforts. This site is built with [Gatsby](https://www.gatsbyjs.org), which is a free and open source framework based on [React](https://reactjs.org). Sites built with Gatsby are modern and _fast_.
 
 The site is served on [GitHub Pages](https://pages.github.com/) at [https://renci.github.io/covid-19](https://renci.github.io/covid-19), and [https://covid-19.renci.org](https://covid-19.renci.org) redirects to this location.
 
