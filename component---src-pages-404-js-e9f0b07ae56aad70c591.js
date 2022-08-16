@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkrenci_covid_19_site=self.webpackChunkrenci_covid_19_site||[]).push([[883],{429:function(e,t,n){n.r(t);var l=n(7294),r=n(7667),c=n(7457),i=n(5056);t.default=function(){return l.createElement(r.JH,null,l.createElement(i.p,{title:"404: Not found",description:"",keywords:""}),l.createElement(c.Dx,null,"404 - NOT FOUND"),l.createElement(c.nv,null,"Our sincerest apologies; we've led you astray."))}}}]);
+//# sourceMappingURL=component---src-pages-404-js-e9f0b07ae56aad70c591.js.map
