@@ -1,7 +1,7 @@
 ---
 path: /icees-covid19-openAPI
 title: ICEES+ COVID-19 Open Infrastructure
-active: true
+active: false
 blurb: >
      ICEES+ COVID-19 Open Infrastructure to Democratize and Accelerate Cross-institutional Clinical Data Sharing, Research, and Surveillance: With funding from NCATS, RENCI was granted a CTSA Program administrative supplement through NC TraCS to address COVID-19 public health needs. 
 ---
