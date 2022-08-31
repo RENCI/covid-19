@@ -1,5 +1,5 @@
 ---
-path: /icees-covid19-openAPI
+path: /national-covid-cohort-collaborative
 title: National Covid Cohort Collaborative (N3C)
 active: true
 blurb: >
