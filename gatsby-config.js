@@ -14,6 +14,12 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-styled-components", 
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-2G57TL5Z73"],
+      },
+    },
     "gatsby-plugin-image", 
     "gatsby-plugin-react-helmet", 
     {
